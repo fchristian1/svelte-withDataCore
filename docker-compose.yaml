@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    build:
+      context: api/.
+      dockerfile: Dockerfile
+    image: 192.168.200.100:5000/fchristian1/bbg-app_api_appv2
+    ports:
+      - 4300:3000
+    restart: always
+  view:
+    
+    build:
+      context: view/.
+      dockerfile: Dockerfile
+    image: 192.168.200.100:5000/fchristian1/bbg-app_view_appv2
+
+    ports:
+      - 4080:3000
+    depends_on:
+      - api
+    restart: always
+    
+      

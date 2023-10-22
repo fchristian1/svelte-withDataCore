@@ -1,0 +1,24 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "dockerbuild": "docker build -t 192.168.200.100:5000/fchristian1/bbg-app_api_appv2 .",
+    "dockerpush": "docker push 192.168.200.100:5000/fchristian1/bbg-app_api_appv2",
+    "dbp": "npm run dockerbuild && npm run dockerpush"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "multer": "^1.4.5-lts.1",
+    "node": "^19.6.1",
+    "nodemon": "^2.0.22"
+  }
+}

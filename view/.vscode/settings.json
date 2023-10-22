@@ -1,0 +1,11 @@
+{
+    "svelte/html-self-closing": [
+        "error",
+        {
+            "void": "never", // or "always" or "ignore"
+            "normal": "never", // or "never" or "ignore"
+            "component": "never", // or "never" or "ignore"
+            "svelte": "never" // or "never" or "ignore"
+        }
+    ]
+}
